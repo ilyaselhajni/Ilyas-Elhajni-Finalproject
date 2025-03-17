@@ -29994,11 +29994,148 @@ textarea.form-control-lg {
 }
 @font-face {
   font-family: "ilyas";
-  src: url("../../Questrial,Roboto_Condensed,Roboto_Mono/Questrial");
+  src: url("../../public/fonts/Questrial,Roboto_Condensed,Roboto_Mono/Questrial");
 }
 * {
   padding: 0;
   font-family: "ilyas";
+}
+
+section {
+  height: 2vh;
+}
+section #menu, section label {
+  display: none;
+}
+section header {
+  border-radius: 50px;
+  padding: 5px 25px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  justify-content: space-around;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  margin-top: 1rem;
+  width: 90%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+section header nav {
+  display: flex;
+  gap: 2.5rem;
+}
+section header nav a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.692);
+  font-size: large;
+  text-transform: capitalize;
+}
+section header nav a:hover {
+  color: #EB8951;
+}
+section header nav .dropbtn {
+  font-size: 16px;
+  border: none;
+}
+section header nav .dropdown {
+  position: relative;
+  display: inline-block;
+}
+section header nav .dropdown a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.692);
+  font-size: large;
+  text-transform: capitalize;
+}
+section header nav .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+section header nav .dropdown .dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+section header nav .dropdown .dropdown-content a:hover {
+  background-color: #ddd;
+}
+section header nav .dropdown:hover .dropdown-content {
+  display: block;
+}
+section header .icons div {
+  display: flex;
+  gap: 0.5rem;
+  opacity: 50%;
+}
+section header .icons .bi-twitter-x:hover {
+  color: #EB8951;
+  transition: 0.3s;
+}
+section header .icons .bi-facebook:hover {
+  color: #EB8951;
+  transition: 0.3s;
+}
+section header .icons .bi-instagram:hover {
+  color: #EB8951;
+  transition: 0.3s;
+}
+section header .icons .bi-linkedin:hover {
+  color: #EB8951;
+  transition: 0.3s;
+}
+@media (max-width: 420px) {
+  section label {
+    display: block;
+  }
+  section header .icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  section header .icons label .burger {
+    font-size: 28px;
+  }
+  section header nav {
+    padding: 4vh 5vw;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    right: -150%;
+    transition: 0.5s;
+    top: 10vh;
+    display: flex;
+    flex-direction: column !important;
+    align-items: start !important;
+    background-color: rgb(255, 255, 255);
+    gap: 2vh;
+  }
+  section header nav .dropdown .dropbtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300%;
+  }
+  section header nav .dropdown .dropbtn i {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #FCF1EA;
+  }
+  section #menu:checked + nav {
+    right: 0;
+  }
+  section .close {
+    align-self: end;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
