@@ -1,15 +1,14 @@
 
 @font-face{
     font-family: "ilyas";
-    src: url("../../public/fonts/Questrial\,Roboto_Condensed\,Roboto_Mono/")
+    src: url("../../public/fonts/Questrial\,Roboto_Condensed\,Roboto_Mono/Roboto_Mono")
 }
 *{
     padding: 0;
     font-family: "ilyas";
 }
 body{
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
+
+    height: 1000vh;
 }
 @import "./modules/home.scss";

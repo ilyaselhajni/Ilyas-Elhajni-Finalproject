@@ -1,9 +1,12 @@
 
-section{
-    height: 2vh;
+.header{
+    width: 100%;
+    height: 10vh;
     padding: 20px 0;
-    z-index: 997;
-    
+    background-color: white;
+    position: fixed; 
+    z-index: 997; 
+    top: 0;
     #menu,label{
         display: none;
     }
@@ -11,14 +14,16 @@ section{
         border-radius: 50px;
         padding: 10px 30px;
         box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-        display: flex !important;
-        align-items: center !important;
-        justify-content: space-around !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        transition: all 0.5s;
         position: fixed; 
         top: 3vh;
         left: 50%;
         transform: translateX(-50%);
-        z-index: 1000; 
+        background-color: white;
+        z-index: 997; 
         nav{
             display: flex;
             gap: 2.5rem;
