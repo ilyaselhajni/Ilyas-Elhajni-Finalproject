@@ -29998,7 +29998,6 @@ textarea.form-control-lg {
 }
 * {
   padding: 0;
-  font-family: "ilyas";
 }
 
 body {
@@ -30334,6 +30333,10 @@ body {
   align-items: center;
 }
 
+.about-subtitle {
+  padding-bottom: 4rem;
+}
+
 .about-info {
   display: flex;
   flex-direction: column;
@@ -30341,7 +30344,9 @@ body {
 }
 .about-info h6, .about-info .h6 {
   color: #EB8951;
-  font-weight: 900;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 .about-info .sinyator {
   display: flex;
@@ -30354,6 +30359,8 @@ body {
 }
 .about h2, .about .h2 {
   color: #87533A;
+  font-size: 42px;
+  font-weight: 700;
 }
 .about .about-info {
   text-align: left;
@@ -30410,17 +30417,17 @@ body {
 .skills {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin: 50px auto;
-  max-width: 1100px;
+  gap: 2rem;
+  align-items: center;
+  padding: 3rem;
 }
 .skills .skill {
   background: #fff;
-  padding: 20px;
+  padding: 2rem;
+  width: 50vw;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 250px;
 }
 .skills h3, .skills .h3 {
   color: #2c3e50;
@@ -30454,6 +30461,135 @@ body {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.portfolio h2, .portfolio .h2 {
+  color: #87533A;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+#sidebar:has(button[data-filter="web design"]:focus) ~ #all-design div:not([class*="web design"]) {
+  display: none;
+}
+
+#sidebar:has(button[data-filter=graphiques]:focus) ~ #all-design div:not([class*=graphiques]) {
+  display: none;
+}
+
+#sidebar:has(button[data-filter=motion]:focus) ~ #all-design div:not([class*=motion]) {
+  display: none;
+}
+
+#sidebar:has(button[data-filter=branding]:focus) ~ #all-design div:not([class*=branding]) {
+  display: none;
+}
+
+.filteredList {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+#sidebar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+#sidebar .filter-option {
+  border: none;
+  background-color: white;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+}
+#sidebar .filter-option:hover {
+  color: #EB8951;
+  background-color: #FCEBE0;
+  border-radius: 20px;
+}
+#sidebar .filter-option:focus {
+  background-color: #EB8951;
+  color: white;
+  border-radius: 20px;
+}
+@media (max-width: 420px) {
+  #sidebar {
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+#all-design {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem;
+  width: 80%;
+}
+@media (max-width: 420px) {
+  #all-design {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  background: white;
+  text-align: left;
+}
+
+.category {
+  color: #E87E3F;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.content {
+  padding: 20px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 15px;
+  color: #666;
+}
+
+#myBtn {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  max-width: 30px;
+  border: none;
+  font-size: 15px;
+  padding: 4px;
+  border-radius: 50%;
+  position: fixed;
+  background-color: #EB8951;
+  width: 100%;
+  transition: all 0.4s;
+}
+#myBtn i {
+  color: white;
+}
+
+#myBtn:hover {
+  opacity: 60%;
 }
 
 /*# sourceMappingURL=app.css.map */
