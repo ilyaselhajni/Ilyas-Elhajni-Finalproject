@@ -30000,10 +30000,6 @@ textarea.form-control-lg {
   padding: 0;
 }
 
-body {
-  height: 1000vh;
-}
-
 .home {
   display: flex;
   align-items: center;
@@ -30463,6 +30459,134 @@ body {
   }
 }
 
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  background-color: #f9f9f9;
+}
+
+.about-part1 {
+  width: 45%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-part1 strong {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.about-part1 h1, .about-part1 .h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #222;
+}
+
+.about-part1 p {
+  color: #666;
+  font-size: 16px;
+}
+
+.abouticons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.abouticons div {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.abouticons i {
+  color: #EB8951;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.about-part1 button {
+  background: none;
+  border: none;
+  color: #222;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.about-part1 button:hover {
+  margin-left: 12px;
+  color: #EB8951;
+}
+
+.about-part2 {
+  width: 50%;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-part2 input,
+.about-part2 textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.about-part2 textarea {
+  resize: none;
+  height: 120px;
+}
+
+.about-part2 button {
+  width: 100%;
+  background: #e67e22;
+  border: none;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.about-part2 button:hover {
+  background: #cf6d17;
+}
+
+/* Responsive */
+@media (max-width: 420px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+  .about-part1,
+  .about-part2 {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+  }
+  .abouticons {
+    align-items: left;
+  }
+}
 #myBtn {
   position: fixed;
   right: 15px;
@@ -30481,6 +30605,46 @@ body {
 
 #myBtn:hover {
   opacity: 60%;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.footer p {
+  margin: 5px 0;
+}
+.footer .social-icons {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.footer .social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid black;
+  text-decoration: none;
+  font-size: 18px;
+}
+.footer .social-icons a i {
+  color: gray;
+}
+.footer .social-icons i:hover {
+  color: #EB8951;
+}
+.footer .social-icons a:hover {
+  margin-left: 3px;
+  border: 2px solid #EB8951;
+}
+.footer .designer {
+  color: #EB8951;
 }
 
 .portfolio h2, .portfolio .h2 {
@@ -30524,6 +30688,7 @@ body {
   color: #EB8951;
   background-color: #FCEBE0;
   border-radius: 20px;
+  margin-top: 5px;
 }
 #sidebar .filter-option:focus {
   background-color: #EB8951;
@@ -30568,12 +30733,12 @@ body {
 }
 
 .card:hover {
-  animation: moveAround 2s;
+  margin-top: 10px;
 }
 
 /* Typography styles */
 .category {
-  color: #E87E3F;
+  color: #EB8951;
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
@@ -30603,6 +30768,7 @@ body {
   border: none;
   border-radius: 10px;
   padding: 20px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 .service-card i {
   color: #EB8951;
@@ -30745,18 +30911,6 @@ details[open] summary {
   transform: rotate(135deg);
 }
 
-/* Keyframe animation */
-@keyframes moveAround {
-  0% {
-    transform: translate(0, 0) scale(1.05);
-  }
-  25% {
-    transform: translate(5px, -5px) scale(1.05);
-  }
-  100% {
-    transform: translate(0, 0) scale(1.05);
-  }
-}
 /* Mobile-specific styling */
 @media (max-width: 420px) {
   .nonemobile {

@@ -43,6 +43,7 @@
         color: $main_color;
         background-color: $light_color;
         border-radius: $b-rounded;
+        margin-top: 5px;
     }
 
     .filter-option:focus {
@@ -88,12 +89,12 @@
 }
 
 .card:hover {
-    animation: moveAround 2s;
+    margin-top : 10px;
 }
 
 /* Typography styles */
 .category {
-    color: #E87E3F;
+    color: $main_color;
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;

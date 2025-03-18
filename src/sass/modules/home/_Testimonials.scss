@@ -96,13 +96,6 @@
     transform: rotate(135deg);
 }
 
-/* Keyframe animation */
-@keyframes moveAround {
-    0% { transform: translate(0, 0) scale(1.05); }
-    25% { transform: translate(5px, -5px) scale(1.05); }
-    100% { transform: translate(0, 0) scale(1.05); }
-}
-
 /* Mobile-specific styling */
 @media (max-width: 420px) {
     .nonemobile {
