@@ -1,118 +1,108 @@
-.portfolio{
-    h2{
+.portfolio {
+    h2 {
         color: $second_color;
         font-size: 42px;
-        font-weight: 700;
+        font-weight: 500;
     }
-    // .filteredList{
-    //     display: flex;
-    //     gap: 1rem;
-    //     justify-content: center;
-    //     #sidebar{
-            
-    //     }
-    //     .button-value:hover{
-    //         color: $main_color;
-    //         background-color: $light_color;
-    //         border-radius: $b-rounded;
-    //     }
-       
-    // }
 }
 
-#sidebar:has(button[data-filter="web design"]:focus) ~ #all-design div:not([class*="web design"]) {
+/* Sidebar filtering logic */
+#sidebar:has(button[data-filter="web design"]:focus) ~ #all-design div:not([class*="web design"]),
+#sidebar:has(button[data-filter="graphiques"]:focus) ~ #all-design div:not([class*="graphiques"]),
+#sidebar:has(button[data-filter="motion"]:focus) ~ #all-design div:not([class*="motion"]),
+#sidebar:has(button[data-filter="branding"]:focus) ~ #all-design div:not([class*="branding"]) {
     display: none;
-  }
-  
-  #sidebar:has(button[data-filter="graphiques"]:focus) ~ #all-design div:not([class*="graphiques"]) {
-    display: none;
-  }
-  
-  #sidebar:has(button[data-filter="motion"]:focus) ~ #all-design div:not([class*="motion"]) {
-    display: none;
-  }
-  
-  #sidebar:has(button[data-filter="branding"]:focus) ~ #all-design div:not([class*="branding"]) {
-    display: none;
-  }
-  
-.filteredList{
+}
+
+
+.filteredList {
     display: flex;
     flex-direction: column;
     gap: 3rem;
     align-items: center;
-
 }
 
-#sidebar{
+/* Sidebar filter buttons */
+#sidebar {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    .filter-option{
-           border: none;
-           background-color: white;
-           font-size: 15px;
-           font-weight: 500;
-           padding: 8px 20px;
-           cursor: pointer;
-           border-radius: 30px;
-           transition: all 0.3s ease-in-out;
-           }
-           .filter-option:hover{
-                    color: $main_color;
-                    background-color: $light_color;
-                    border-radius: $b-rounded;
-           } 
-           .filter-option:focus{
-            background-color: $main_color;
-            color: white;
-            border-radius: $b-rounded;
-           }
 
-           @media (max-width:420px) {
-            flex-wrap: wrap;
-            gap:15px;
-            align-items: center;
-            text-align: center;     
-           }
+    .filter-option {
+        border: none;
+        background-color: white;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 8px 20px;
+        cursor: pointer;
+        border-radius: 30px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .filter-option:hover {
+        color: $main_color;
+        background-color: $light_color;
+        border-radius: $b-rounded;
+    }
+
+    .filter-option:focus {
+        background-color: $main_color;
+        color: white;
+        border-radius: $b-rounded;
+    }
+
+    @media (max-width: 420px) {
+        flex-wrap: wrap;
+        gap: 15px;
+        align-items: center;
+        text-align: center;
+    }
 }
-#all-design{
+
+/* Design grid layout */
+#all-design {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
     padding: 3rem;
     width: 80%;
-    @media (max-width:420px) {
+
+    @media (max-width: 420px) {
         display: flex;
         flex-direction: column;
         width: 100%;
-
-
-
-
-
     }
-
-
-
 }
+
+/* Card styles */
 .card {
     border-radius: $b-rounded;
     overflow: hidden;
     box-shadow: $shadow;
     background: white;
     text-align: left;
+
+    img:hover {
+        opacity: 50%;
+    }
 }
 
+.card:hover {
+    animation: moveAround 2s;
+}
+
+/* Typography styles */
 .category {
     color: #E87E3F;
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
 }
-.content{
+
+.content {
     padding: 20px;
 }
+
 .title {
     font-size: 20px;
     font-weight: bold;
@@ -121,26 +111,4 @@
 .description {
     font-size: 15px;
     color: #666;
-}
-
-#myBtn {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    max-width: 30px;
-    border: none;
-    font-size: 15px;
-    padding: 4px;
-    border-radius: 50%;
-    position: fixed;    
-    background-color: $main_color;
-    width: 100%;
-    transition: all 0.4s;
-    i{
-        color: white;
-    }
-
-}
-#myBtn:hover {
-    opacity: 60%;
 }

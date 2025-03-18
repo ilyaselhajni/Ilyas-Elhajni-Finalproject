@@ -1,0 +1,111 @@
+.Testimonials {
+    background-color: #FAF9FB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        color: $second_color;
+        font-size: 42px;
+        font-weight: 500;
+    }
+
+    #carouselExampleRide {
+        box-shadow: $shadow;
+        border-radius: $b-rectangle;
+        padding: 2rem;
+        width: 80%;
+
+        .carousel-inner {
+            .carousel-item {
+                img {
+                    border-radius: $b-rounded;
+                }
+                .carousel-text {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+/* Small image styling */
+.carosmallimage {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    img {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Carousel control buttons */
+.carousel-controls {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 1;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.carousel-control-prev:hover, 
+.carousel-control-next:hover {
+    background-color: $main_color;
+}
+
+/* Custom arrow icons */
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    background-image: none;
+    width: 20px;
+    height: 20px;
+    border: solid #333;
+    border-width: 0 2px 2px 0;
+    padding: 7px;
+}
+
+.carousel-control-prev-icon {
+    transform: rotate(-45deg);
+}
+
+.carousel-control-next-icon {
+    transform: rotate(135deg);
+}
+
+/* Keyframe animation */
+@keyframes moveAround {
+    0% { transform: translate(0, 0) scale(1.05); }
+    25% { transform: translate(5px, -5px) scale(1.05); }
+    100% { transform: translate(0, 0) scale(1.05); }
+}
+
+/* Mobile-specific styling */
+@media (max-width: 420px) {
+    .nonemobile {
+        display: none;
+    }
+}
