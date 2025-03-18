@@ -30593,6 +30593,69 @@ body {
   color: #666;
 }
 
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-card {
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+}
+.service-card i {
+  color: #EB8951;
+  font-size: 24px;
+}
+
+.Questions {
+  width: 70%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 5px;
+}
+
+details {
+  border: 1px solid rgba(128, 128, 128, 0.219);
+  border-radius: 5px;
+}
+@media (max-width: 420px) {
+  details {
+    width: 100%;
+  }
+}
+
+summary {
+  background: white;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  outline: none;
+}
+
+summary:hover {
+  background: #f1f1f1;
+}
+
+details[open] summary {
+  background: #FCEBE0;
+  color: #EB8951;
+  font-weight: bold;
+}
+
+.Questions-content {
+  padding: 15px;
+  background: #ffeee6;
+  color: #333;
+}
+
 .Testimonials {
   background-color: #FAF9FB;
   display: flex;
