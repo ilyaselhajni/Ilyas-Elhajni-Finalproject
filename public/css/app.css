@@ -30000,63 +30000,50 @@ textarea.form-control-lg {
   padding: 0;
 }
 
+svg {
+  width: 13%;
+}
+@media (max-width: 420px) {
+  svg {
+    width: 70%;
+  }
+}
+
+.about-title {
+  color: #87533A;
+  font-size: 42px;
+  font-weight: 500;
+}
+
+.about-subtitle {
+  font-size: 16px;
+}
+
 .home {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 80px 10%;
-  position: relative;
-}
-@media (max-width: 768px) {
-  .home {
-    flex-direction: column;
-    text-align: center;
-    padding: 50px 5%;
-  }
 }
 
 .hero-content {
   max-width: 50%;
 }
-@media (max-width: 768px) {
-  .hero-content {
-    max-width: 100%;
-  }
-}
-
 .hero-content h1, .hero-content .h1 {
   font-size: 50px;
   color: #111;
   font-weight: 600;
   margin: 0;
 }
-@media (max-width: 768px) {
-  .hero-content h1, .hero-content .h1 {
-    font-size: 36px;
-  }
-}
-
 .hero-content p {
   font-size: 18px;
   color: #555;
   margin: 15px 0 30px;
 }
-@media (max-width: 768px) {
-  .hero-content p {
-    font-size: 16px;
-  }
-}
 
 .buttons {
   display: flex;
   gap: 15px;
-}
-@media (max-width: 768px) {
-  .buttons {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
 }
 
 .btn {
@@ -30065,22 +30052,14 @@ textarea.form-control-lg {
   padding: 14px 25px;
   border-radius: 30px;
   font-weight: 600;
-  transition: 0.3s ease-in-out;
   width: 250px;
-}
-@media (max-width: 768px) {
-  .btn {
-    width: 100%;
-    padding: 16px;
-  }
 }
 
 .primary {
   background-color: #EB8951;
-  color: #fff;
+  color: white;
   border: none;
 }
-
 .primary:hover {
   background-color: #EB8951;
 }
@@ -30090,23 +30069,15 @@ textarea.form-control-lg {
   color: #EB8951;
   background: transparent;
 }
-
 .secondary:hover {
   background-color: #EB8951;
-  color: #fff;
+  color: white;
 }
 
 .stats {
   display: flex;
   gap: 40px;
   margin-top: 40px;
-}
-@media (max-width: 768px) {
-  .stats {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
 }
 
 .stat h2, .stat .h2 {
@@ -30115,7 +30086,6 @@ textarea.form-control-lg {
   font-weight: 600;
   margin: 0;
 }
-
 .stat p {
   font-size: 14px;
   color: #555;
@@ -30126,13 +30096,6 @@ textarea.form-control-lg {
   position: relative;
   max-width: 45%;
 }
-@media (max-width: 768px) {
-  .hero-image {
-    max-width: 100%;
-    margin-top: 30px;
-  }
-}
-
 .hero-image img {
   width: 100%;
   position: relative;
@@ -30144,7 +30107,6 @@ textarea.form-control-lg {
   border-radius: 50%;
   z-index: 1;
 }
-
 .shape-1 {
   width: 200px;
   height: 200px;
@@ -30152,12 +30114,6 @@ textarea.form-control-lg {
   top: -50px;
   right: -50px;
 }
-@media (max-width: 768px) {
-  .shape-1 {
-    display: none;
-  }
-}
-
 .shape-2 {
   width: 200px;
   height: 200px;
@@ -30165,7 +30121,44 @@ textarea.form-control-lg {
   bottom: -30px;
   left: -30px;
 }
-@media (max-width: 768px) {
+
+/* Media Queries */
+@media (max-width: 420px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 5%;
+  }
+  .hero-content {
+    max-width: 100%;
+  }
+  .hero-content h1, .hero-content .h1 {
+    font-size: 36px;
+  }
+  .hero-content p {
+    font-size: 16px;
+  }
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .btn {
+    width: 100%;
+    padding: 16px;
+  }
+  .stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .hero-image {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+  .shape-1 {
+    display: none;
+  }
   .shape-2 {
     width: 180px;
     height: 180px;
@@ -30174,7 +30167,6 @@ textarea.form-control-lg {
     transform: translateX(50%);
   }
 }
-
 .header {
   width: 100%;
   height: 15vh;
@@ -30189,18 +30181,22 @@ textarea.form-control-lg {
 }
 .header header {
   border-radius: 50px;
-  padding: 10px 30px;
+  padding: 15px 50px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-around;
-  transition: all 0.5s;
   position: fixed;
   top: 3vh;
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
   z-index: 997;
+}
+.header header h3, .header header .h3 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 500;
 }
 .header header nav {
   display: flex;
@@ -30211,6 +30207,8 @@ textarea.form-control-lg {
   color: rgba(0, 0, 0, 0.692);
   font-size: large;
   text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 400;
 }
 .header header nav a:hover {
   color: #EB8951;
@@ -30228,6 +30226,12 @@ textarea.form-control-lg {
   color: rgba(0, 0, 0, 0.692);
   font-size: large;
   text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 400;
+}
+.header header nav .dropdown a span:hover {
+  color: #EB8951;
+  cursor: pointer;
 }
 .header header nav .dropdown .dropdown-content {
   display: none;
@@ -30353,16 +30357,11 @@ body {
   background: #f9f9f9;
   padding: 50px;
 }
-.about h2, .about .h2 {
-  color: #87533A;
-  font-size: 42px;
-  font-weight: 500;
-}
 .about .about-info {
   text-align: left;
 }
 .about .about-details {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 5px 15px;
 }
@@ -30391,7 +30390,7 @@ body {
   margin-top: 20px;
   font-family: cursive;
   font-size: 18px;
-  color: #5a3826;
+  color: #87533A;
 }
 
 @media (max-width: 420px) {
@@ -30442,7 +30441,7 @@ body {
 }
 .skills .progress {
   height: 100%;
-  background: #e67e22;
+  background: #EB8951;
 }
 .skills .percentage {
   display: block;
@@ -30451,11 +30450,13 @@ body {
 }
 @media (max-width: 420px) {
   .skills {
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+  }
+  .skills .skill {
+    width: 100%;
   }
 }
 
@@ -30653,7 +30654,6 @@ body {
   font-weight: 500;
 }
 
-/* Sidebar filtering logic */
 #sidebar:has(button[data-filter="web design"]:focus) ~ #all-design div:not([class*="web design"]),
 #sidebar:has(button[data-filter=graphiques]:focus) ~ #all-design div:not([class*=graphiques]),
 #sidebar:has(button[data-filter=motion]:focus) ~ #all-design div:not([class*=motion]),
@@ -30668,7 +30668,6 @@ body {
   align-items: center;
 }
 
-/* Sidebar filter buttons */
 #sidebar {
   display: flex;
   justify-content: center;
@@ -30704,7 +30703,6 @@ body {
   }
 }
 
-/* Design grid layout */
 #all-design {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -30720,7 +30718,6 @@ body {
   }
 }
 
-/* Card styles */
 .card {
   border-radius: 20px;
   overflow: hidden;
@@ -30736,7 +30733,6 @@ body {
   margin-top: 10px;
 }
 
-/* Typography styles */
 .category {
   color: #EB8951;
   font-size: 12px;
@@ -30764,6 +30760,22 @@ body {
   align-items: center;
 }
 
+@media (max-width: 420px) {
+  .container {
+    width: 90%;
+  }
+  .container .serv-text {
+    text-align: left;
+  }
+  .container .serv-text .btn {
+    width: 50%;
+  }
+  .container .serv {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
 .service-card {
   border: none;
   border-radius: 10px;
@@ -30782,6 +30794,11 @@ body {
   flex-direction: column;
   gap: 1rem;
   border-radius: 5px;
+}
+@media (max-width: 420px) {
+  .Questions {
+    width: 90%;
+  }
 }
 
 details {
@@ -30804,6 +30821,11 @@ summary {
   justify-content: space-between;
   width: 100%;
   outline: none;
+}
+@media (max-width: 420px) {
+  summary {
+    width: 100%;
+  }
 }
 
 summary:hover {
@@ -30846,7 +30868,6 @@ details[open] summary {
   text-align: left;
 }
 
-/* Small image styling */
 .carosmallimage {
   display: flex;
   gap: 10px;
@@ -30862,7 +30883,6 @@ details[open] summary {
   flex-direction: column;
 }
 
-/* Carousel control buttons */
 .carousel-controls {
   position: absolute;
   bottom: -50px;
@@ -30892,7 +30912,6 @@ details[open] summary {
   background-color: #EB8951;
 }
 
-/* Custom arrow icons */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-image: none;
@@ -30911,7 +30930,6 @@ details[open] summary {
   transform: rotate(135deg);
 }
 
-/* Mobile-specific styling */
 @media (max-width: 420px) {
   .nonemobile {
     display: none;

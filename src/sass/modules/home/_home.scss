@@ -1,57 +1,30 @@
-
-
 .home {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 80px 10%;
-    position: relative;
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-        text-align: center;
-        padding: 50px 5%;
-    }
 }
 
 .hero-content {
     max-width: 50%;
 
-    @media (max-width: 768px) {
-        max-width: 100%;
+    h1 {
+        font-size: 50px;
+        color: #111;
+        font-weight: 600;
+        margin: 0;
     }
-}
 
-.hero-content h1 {
-    font-size: 50px;
-    color: #111;
-    font-weight: 600;
-    margin: 0;
-
-    @media (max-width: 768px) {
-        font-size: 36px;
-    }
-}
-
-.hero-content p {
-    font-size: 18px;
-    color: #555;
-    margin: 15px 0 30px;
-
-    @media (max-width: 768px) {
-        font-size: 16px;
+    p {
+        font-size: 18px;
+        color: #555;
+        margin: 15px 0 30px;
     }
 }
 
 .buttons {
     display: flex;
     gap: 15px;
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
 }
 
 .btn {
@@ -60,107 +33,128 @@
     padding: 14px 25px;
     border-radius: 30px;
     font-weight: 600;
-    transition: 0.3s ease-in-out;
-    width: 250px; 
-
-    @media (max-width: 768px) {
-        width: 100%;
-        padding: 16px;
-    }
+    width: 250px;
 }
 
 .primary {
     background-color: $main_color;
-    color: #fff;
+    color: white;
     border: none;
-}
 
-.primary:hover {
-    background-color: $main_color;
+    &:hover {
+        background-color: $main_color;
+    }
 }
 
 .secondary {
     border: 2px solid $main_color;
     color: $main_color;
     background: transparent;
-}
 
-.secondary:hover {
-    background-color: $main_color;
-    color: #fff;
+    &:hover {
+        background-color: $main_color;
+        color: white;
+    }
 }
 
 .stats {
     display: flex;
     gap: 40px;
     margin-top: 40px;
+}
 
-    @media (max-width: 768px) {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+.stat {
+    h2 {
+        font-size: 32px;
+        color: #111;
+        font-weight: 600;
+        margin: 0;
     }
-}
 
-.stat h2 {
-    font-size: 32px;
-    color: #111;
-    font-weight: 600;
-    margin: 0;
-}
-
-.stat p {
-    font-size: 14px;
-    color: #555;
-    margin: 5px 0 0;
+    p {
+        font-size: 14px;
+        color: #555;
+        margin: 5px 0 0;
+    }
 }
 
 .hero-image {
     position: relative;
     max-width: 45%;
 
-    @media (max-width: 768px) {
-        max-width: 100%;
-        margin-top: 30px;
+    img {
+        width: 100%;
+        position: relative;
+        z-index: 2;
     }
-}
-
-.hero-image img {
-    width: 100%;
-    position: relative;
-    z-index: 2;
 }
 
 .shape {
     position: absolute;
     border-radius: 50%;
     z-index: 1;
-}
 
-.shape-1 {
-    width: 200px;
-    height: 200px;
-    background-color: #fde8e2;
-    top: -50px;
-    right: -50px;
+    &-1 {
+        width: 200px;
+        height: 200px;
+        background-color: #fde8e2;
+        top: -50px;
+        right: -50px;
+    }
 
-    @media (max-width: 768px) {
-       display: none;
+    &-2 {
+        width: 200px;
+        height: 200px;
+        background-color: #f0f0f0;
+        bottom: -30px;
+        left: -30px;
     }
 }
 
-.shape-2 {
-    width: 200px;
-    height: 200px;
-    background-color: #f0f0f0;
-    bottom: -30px;
-    left: -30px;
+/* Media Queries */
+@media (max-width: 420px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 5%;
+    }
+    .hero-content {
+        max-width: 100%;
 
-    @media (max-width: 768px) {
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .btn {
+        width: 100%;
+        padding: 16px;
+    }
+    .stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .hero-image {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+    .shape-1 {
+        display: none;
+    }
+    .shape-2 {
         width: 180px;
         height: 180px;
         left: auto;
         right: 50%;
         transform: translateX(50%);
     }
-}
+}   

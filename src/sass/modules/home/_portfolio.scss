@@ -6,15 +6,13 @@
     }
 }
 
-/* Sidebar filtering logic */
+
 #sidebar:has(button[data-filter="web design"]:focus) ~ #all-design div:not([class*="web design"]),
 #sidebar:has(button[data-filter="graphiques"]:focus) ~ #all-design div:not([class*="graphiques"]),
 #sidebar:has(button[data-filter="motion"]:focus) ~ #all-design div:not([class*="motion"]),
 #sidebar:has(button[data-filter="branding"]:focus) ~ #all-design div:not([class*="branding"]) {
     display: none;
 }
-
-
 .filteredList {
     display: flex;
     flex-direction: column;
@@ -22,7 +20,7 @@
     align-items: center;
 }
 
-/* Sidebar filter buttons */
+
 #sidebar {
     display: flex;
     justify-content: center;
@@ -60,7 +58,7 @@
     }
 }
 
-/* Design grid layout */
+
 #all-design {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -75,7 +73,6 @@
     }
 }
 
-/* Card styles */
 .card {
     border-radius: $b-rounded;
     overflow: hidden;
@@ -92,7 +89,7 @@
     margin-top : 10px;
 }
 
-/* Typography styles */
+
 .category {
     color: $main_color;
     font-size: 12px;
