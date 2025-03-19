@@ -29993,11 +29993,12 @@ textarea.form-control-lg {
   }
 }
 @font-face {
-  font-family: "ilyas";
-  src: url("../../public/fonts/Questrial,Roboto_Condensed,Roboto_Mono/Roboto_Mono");
+  font-family: "Roboto";
+  src: url("../../public/fonts/Roboto_Condensed-Regular.ttf");
 }
 * {
   padding: 0;
+  font-family: "Roboto", serif;
 }
 
 svg {
